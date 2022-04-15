@@ -1,0 +1,2 @@
+1) Added a thing to nuxt config by being unaware of its consequences
+ runtimeCompiler: true

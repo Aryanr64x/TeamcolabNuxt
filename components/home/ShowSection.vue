@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1  lg:grid-cols-2  lg:gap-y-40 gap-x-12">
             <div class=" flex flex-col justify-center order-2 lg:order-1 mt-12 lg:mt-0" data-aos="fade-right">
                 <div class="text-3xl font-normal text-gray-600 text-center lg:text-left">
-                    Your Hub For TeamWork
+                    Your Hub for teamwork
                 </div>
                 <div class=" mt-6 text-gray-600 text-center lg:text-left">
                     Project discussions, Important documents, Free food discussions they all live tidely together in a
