@@ -1,6 +1,6 @@
 <template>
   <section class="hero bg-cover text-white">
-    <div v-show="success" class="bg-red-700 text-white">This is a modal</div>
+ 
     <Navbar :isHome="true" />
     <div
       class="
@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import client from "../../sanity/sanity_client";
 import HeroForm from './HeroForm.vue';
 import Navbar from '../Navbar.vue';
 export default {

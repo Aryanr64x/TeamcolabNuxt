@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import client from "../../sanity/sanity_client";
+
 export default {
   name: "HeroForm",
   data() {
