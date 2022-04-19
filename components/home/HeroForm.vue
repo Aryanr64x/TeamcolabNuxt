@@ -11,6 +11,7 @@
       justify-center
       xl:block
     "
+    
     data-aos="slide-right"
   >
     <input
@@ -48,25 +49,22 @@
 </template>
 
 <script>
-import client from "../../sanity/sanity_client";
-
+import axios from "axios";
 export default {
   name: "HeroForm",
   data() {
     return {
       email: "",
-      success: false,
     };
   },
   methods: {
     async submitEmail() {
-      const doc = {
-        _type: "emails",
-        email: this.email,
-      };
       try {
-        await client.create(doc);
-        this.email = "";
+        await axios.post("http://localhost:1337/api/emails", {
+          data: {
+            email: this.email,
+          },
+        });
         this.showModal();
       } catch (e) {
         console.log(e);
@@ -75,7 +73,10 @@ export default {
 
     showModal() {
       this.$dialog.alert(
-        { title: "Thanks for that", body: "You will soon get an HAVING the demo version of our final product 😀😀 " },
+        {
+          title: "Thanks for that",
+          body: "You will soon get an HAVING the demo version of our final product 😀😀 ",
+        },
         { verification: "OKI DOKI" }
       );
     },

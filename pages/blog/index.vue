@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue';
-import BlogHeader from '../components/blog/BlogHeader.vue';
-import Blogs from '../components/blog/Blogs.vue';
-import Footer from '../components/Footer.vue';
+import Navbar from '../../components/Navbar.vue';
+import BlogHeader from '../../components/blog/BlogHeader.vue';
+import Blogs from '../../components/blog/Blogs.vue';
+import Footer from '../../components/Footer.vue';
 
 export default {
   

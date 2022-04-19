@@ -6,6 +6,7 @@
       </div>
       <div class="mt-2">
          Find out about our latest design tips and tricks . Also new features that keep coming almost every week!
+          
       </div>
   </div>
 

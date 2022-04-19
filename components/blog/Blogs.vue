@@ -13,11 +13,8 @@
   >
 
 
-    <BlogCard v-for="post in posts" :key="post.slug.current" :post="post"/>
-        <BlogCard v-for="post in posts" :key="post.slug.current" :post="post"/>
-           <BlogCard v-for="post in posts" :key="post.slug.current" :post="post"/>
-        <BlogCard v-for="post in posts" :key="post.slug.current" :post="post"/>
-
+    <BlogCard v-for="post in posts" :key="post.attributes.slug" :post="post"/>
+  
 
 
   </div>
@@ -26,7 +23,8 @@
 
 <script>
 import BlogCard from "./BlogCard.vue";
-import client from "../../sanity/sanity_client";
+import axios from 'axios';
+import qs from 'qs';
 
 export default {
   name: "Blogs",
@@ -39,9 +37,19 @@ export default {
       }
   },
   async created() {
+    const query = qs.stringify(
+      {
+        
+        populate: ['author', 'image'], 
+      },
+     
+      {
+        encodeValuesOnly: true,
+      }
+    );
     try {
-      const response = await client.fetch("*[_type=='post']");
-      this.posts.push(...response);
+      const resp = await axios.get('http://localhost:1337/api/articles?'+query);
+      this.posts.push(...resp.data.data);
     } catch (e) {
         console.log(e);
     }
