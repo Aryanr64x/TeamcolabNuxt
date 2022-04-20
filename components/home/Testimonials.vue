@@ -1,9 +1,10 @@
 <template>
-  <section class="mt-44 px-4 sm:px-20 xl:px-36">
-        <div class="text-4xl">
+  <section class="mt-44 ">
+        <div class="text-4xl px-4 sm:px-20 xl:px-36 text-center">
             What people are saying ...
         </div>
-        <div class="grid grid-flow-col gap-x-8 overflow-x-auto  py-8 mt-32 no-scrollbar " id="scroll_container">
+        <div class="grid  grid-flow-col  gap-x-8 overflow-x-auto  py-8 mt-8 no-scrollbar test" id="scroll_container">
+            <!-- We can insert these cards VIA CMS -->
             <testimonial-card />
             <testimonial-card />
               <testimonial-card />
@@ -49,4 +50,5 @@ export default {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+ 
 </style>

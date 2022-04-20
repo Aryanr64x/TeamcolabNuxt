@@ -1,4 +1,6 @@
 <template>
+ <!-- In this component remounting causes trouble with AOS .. just know that we can always use animate .css with something that 
+  is at the topp of a page  -->
   <div
     class="
       mt-12
@@ -12,7 +14,6 @@
       xl:block
     "
     
-    data-aos="slide-right"
   >
     <input
       class="
@@ -66,6 +67,7 @@ export default {
           },
         });
         this.showModal();
+        this.email = '';
       } catch (e) {
         console.log(e);
       }
